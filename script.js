@@ -20,6 +20,21 @@ document.querySelectorAll("nav a").forEach((anchor) => {
   });
 });
 
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+const darkModeToggle = document.getElementById("darkModeToggle");
+
+// Toggle mobile menu
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("show");
+});
+
+// Optional: Dark mode toggle (basic version)
+darkModeToggle.addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
+});
+
+
 // Add Fade-in Effect on Scroll (AOS.js is already linked)
 AOS.init({
   duration: 1000,
